@@ -1,6 +1,5 @@
 package patryk.gawron.l2cube2;
 
-import android.opengl.GLES20;
 import android.opengl.GLES30;
 
 public class Shader {
@@ -20,11 +19,11 @@ public class Shader {
                     "void main() {" +
                     "  gl_FragColor =  vColor;" +
                     "}";
-    public Shader(){
+    Shader(){
         mRendererID = createShader();
     }
 
-    public int compileShader(int type, String shaderCode){
+    private int compileShader(int type, String shaderCode){
 
         int shader = GLES30.glCreateShader(type);
 
@@ -36,17 +35,17 @@ public class Shader {
 
     public int createShader(){
         int program;
-        int vertexShader = compileShader(GLES20.GL_VERTEX_SHADER,
+        int vertexShader = compileShader(GLES30.GL_VERTEX_SHADER,
                 vertexShaderCode);
-        int fragmentShader = compileShader(GLES20.GL_FRAGMENT_SHADER,
+        int fragmentShader = compileShader(GLES30.GL_FRAGMENT_SHADER,
                 fragmentShaderCode);
 
-        program = GLES20.glCreateProgram();
+        program = GLES30.glCreateProgram();
 
-        GLES20.glAttachShader(program, vertexShader);
-        GLES20.glAttachShader(program, fragmentShader);
+        GLES30.glAttachShader(program, vertexShader);
+        GLES30.glAttachShader(program, fragmentShader);
 
-        GLES20.glLinkProgram(program);
+        GLES30.glLinkProgram(program);
         return program;
     }
 
@@ -59,8 +58,7 @@ public class Shader {
     }
 
     private int getUniformLocation(String name){
-        int location = GLES30.glGetUniformLocation(mRendererID, name);
-        return location;
+        return GLES30.glGetUniformLocation(mRendererID, name);
     }
 
     public void setUniform4fv(String name, float[] data){

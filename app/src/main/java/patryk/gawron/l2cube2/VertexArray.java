@@ -1,7 +1,6 @@
 package patryk.gawron.l2cube2;
 
 import android.opengl.GLES30;
-import android.os.SystemClock;
 
 import java.util.ArrayList;
 import java.util.List;
