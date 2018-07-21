@@ -1,6 +1,27 @@
 <resources>
     <string name="app_name">L2Cube2</string>
-    <string name="button1_lable">R R\' L L\'</string>
-    <string name="next_move">Next</string>
-    <string name="reset_cube">Reset</string>
+    <string name="rotation_menu">Face rotations</string>
+    <string name="algorithms">Algorithms</string>
+    <string name="button3_label">R U R\'</string>
+    <string name="button4_label">U\' R U U R\' U U R U\' R\'</string>
+    <string name="button5_label">y L\' U L U U y\' R U R\'</string>
+    <string name="button6_label">M U R\' F F R U L\' U L L L\' M\'</string>
+    <string name="button7_label">R</string>
+    <string name="button8_label">R\'</string>
+    <string name="button9_label">L</string>
+    <string name="button10_label">L\'</string>
+    <string name="button11_label">F</string>
+    <string name="button12_label">F\'</string>
+    <string name="button13_label">B</string>
+    <string name="button14_label">B\'</string>
+    <string name="button15_label">U</string>
+    <string name="button16_label">U\'</string>
+    <string name="button17_label">D</string>
+    <string name="button18_label">D\'</string>
+    <string name="button19_label">M</string>
+    <string name="button20_label">M\'</string>
+    <string name="button21_label">E</string>
+    <string name="button22_label">E\'</string>
+    <string name="button23_label">S</string>
+    <string name="button24_label">S\'</string>
 </resources>

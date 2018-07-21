@@ -24,10 +24,6 @@ public class IndexBuffer {
         GLES30.glBufferData(GLES30.GL_ELEMENT_ARRAY_BUFFER, data.length *2, indiciesBuffer, GLES30.GL_STATIC_DRAW);
     }
 
-    public ShortBuffer getIndiciesBuffer() {
-        return indiciesBuffer;
-    }
-
     public void bind(){
         GLES30.glBindBuffer(GLES30.GL_ELEMENT_ARRAY_BUFFER, mRendererID[0]);
     }

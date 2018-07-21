@@ -40,7 +40,7 @@ public class GLRenderer implements GLSurfaceView.Renderer {
     public void onSurfaceChanged(GL10 unused, int width, int height) {
         GLES30.glViewport(0, 0, width, height);
         float ratio = (float) width / height;
-        Matrix.frustumM(mProjection, 0, -ratio, ratio, -1, 1, 1, 10);
+        Matrix.frustumM(mProjection, 0, -ratio, ratio, -1, 1, 1, 20);
     }
     public float[] getmProjection(){
         return mProjection;

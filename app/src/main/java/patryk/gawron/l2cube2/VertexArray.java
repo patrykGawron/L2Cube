@@ -9,7 +9,6 @@ public class VertexArray {
         private int[] mRendererID = new int[1];
         List<Integer> attribList = new ArrayList<Integer>();
         private  int mStride = 0;
-        private boolean enabled = false;
 
 
         public VertexArray(){

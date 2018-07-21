@@ -16,7 +16,7 @@ public class Cube {
     private Shader shader;
     private List<Float[]> rotation;
     private float[][] colors;
-    private static float cubeCoords[] ={
+    private static float cubeCords[] ={
             -0.5f,  0.5f,  0.5f,    //top near left     0
             -0.5f, -0.5f,  0.5f,    //bottom near left  1
              0.5f, -0.5f,  0.5f,    //bottom near right 2
@@ -55,10 +55,11 @@ public class Cube {
     //Wcześniej wszystkie call'e z tej metody były w konstruktorze
     //ale ponieważ tworzę tablicę kostek poza thread'ami openGL'a
     //czyli poza przysłoniętymi metodami renderer'a (a tylko one działają
-    //na trhead'ach openGL'a)
+    //na trhead'ach openGL'a) potrzebuję osobnej metody do stworzenia obiektów
+    //openGL'a
     public void setup(){
         va = new VertexArray();
-        vb = new VertexBuffer(cubeCoords);
+        vb = new VertexBuffer(cubeCords);
         ib = new IndexBuffer(drawOrder);
         shader = new Shader();
 
@@ -69,6 +70,9 @@ public class Cube {
     public void draw(float[] matrix) {
         GLES30.glEnable(GLES30.GL_DEPTH_TEST);
         shader.bind();
+        va.bind();
+        vb.bind();
+        ib.bind();
         va.enableVertex(mProgram, 0);
         shader.setUniformMatrix4fv("uMVPMatrix", matrix);
         int offset = 0;
@@ -88,14 +92,13 @@ public class Cube {
         return rotation.get(index);
     }
 
-    public void pushRotation(Float[] array){ //float angle, float xAxis, float yAxis, float zAxis
-        if(!rotation.add(array)){
-            System.out.println("Failed to add");
-        }
+    public void pushRotation(Float[] rot){
+        rotation.add(rot);
     }
     public int getRotationsPointer(){
         return rotation.size();
     }
+
     public void clear(){
         rotation.clear();
     }
