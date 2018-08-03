@@ -583,19 +583,19 @@ class CustomGLSurfaceView extends GLSurfaceView {
     }
 
     public void cubeUpdate(int[] index, float[]axis, Name rotation){
-        int temp = spots[index[3]].getBoundCube();
-        int temp1 = spots[index[8]].getBoundCube();
-        spots[index[3]].bindCube(spots[index[2]].getBoundCube());
-        spots[index[2]].bindCube(spots[index[1]].getBoundCube());
-        spots[index[1]].bindCube(spots[index[0]].getBoundCube());
-        spots[index[0]].bindCube(temp);
-        spots[index[8]].bindCube(spots[index[7]].getBoundCube());
-        spots[index[7]].bindCube(spots[index[6]].getBoundCube());
-        spots[index[6]].bindCube(spots[index[5]].getBoundCube());
-        spots[index[5]].bindCube(temp1);
-
         if(rotation == Name.NULL){}
         else{
+            int temp = spots[index[3]].getBoundCube();
+            int temp1 = spots[index[8]].getBoundCube();
+            spots[index[3]].bindCube(spots[index[2]].getBoundCube());
+            spots[index[2]].bindCube(spots[index[1]].getBoundCube());
+            spots[index[1]].bindCube(spots[index[0]].getBoundCube());
+            spots[index[0]].bindCube(temp);
+            spots[index[8]].bindCube(spots[index[7]].getBoundCube());
+            spots[index[7]].bindCube(spots[index[6]].getBoundCube());
+            spots[index[6]].bindCube(spots[index[5]].getBoundCube());
+            spots[index[5]].bindCube(temp1);
+
             for(int i = 0; i < 9; i++){
                 mCube[spots[index[i]].getBoundCube()].pushRotation(new Float[]{90f, axis[0], axis[1], axis[2]});
             }
@@ -678,7 +678,7 @@ class CustomGLSurfaceView extends GLSurfaceView {
                     Data.zp();
                     break;
                 case NULL:
-                    cubeUpdate(spotsToChange[0], axisData[0], Name.NULL);
+                    cubeUpdate(spotsToChange[8], axisData[8], Name.NULL);
                     break;
             }
         }

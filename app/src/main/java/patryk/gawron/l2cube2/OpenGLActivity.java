@@ -90,7 +90,11 @@ public class OpenGLActivity extends Activity {
         algorithmParams.gravity = Gravity.CENTER_HORIZONTAL;
 
         guideTextParams.topMargin = 50;
+        guideTextParams.leftMargin = 50;
+        guideTextParams.rightMargin = 50;
         guideTextParams.gravity = Gravity.CENTER_HORIZONTAL;
+        guideText.setGravity(Gravity.CENTER_HORIZONTAL);
+
         if(guide != null){
             guideText.setText(guide);
         }

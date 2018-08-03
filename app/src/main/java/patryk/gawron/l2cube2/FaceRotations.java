@@ -17,8 +17,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.R, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" R \" is a 90 degree clockwise rotation of the right face");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "R is a 90 degree clockwise rotation of the right face");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -27,8 +27,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.RP, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" R\' \" is a 90 degree counter-clockwise rotation of the right face");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "R\' is a 90 degree counter-clockwise rotation of the right face");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -37,8 +37,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.L, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" L \" is a 90 degree clockwise rotation of the left face");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "L is a 90 degree clockwise rotation of the left face");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -47,8 +47,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.LP, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" L\' \" is a 90 degree counter-clockwise rotation of the left face");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "L\' is a 90 degree counter-clockwise rotation of the left face");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -57,8 +57,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.F, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" F \" is a 90 degree clockwise rotation of the front face");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "F is a 90 degree clockwise rotation of the front face");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -67,8 +67,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.FP, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" F\' \" is a 90 degree counter-clockwise rotation of the front face");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "F\' is a 90 degree counter-clockwise rotation of the front face");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -77,8 +77,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.B, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" B \" is a 90 degree clockwise rotation of the back face");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "B is a 90 degree clockwise rotation of the back face");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -87,8 +87,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.BP, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" B\' \" is a 90 degree counter-clockwise rotation of the back face");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "B\' is a 90 degree counter-clockwise rotation of the back face");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -97,8 +97,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.U, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" U \" is a 90 degree clockwise rotation of the upper face");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "U is a 90 degree clockwise rotation of the upper face");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -107,8 +107,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.UP, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" U\' \" is a 90 degree counter-clockwise rotation of the upper face");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "U\' is a 90 degree counter-clockwise rotation of the upper face");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -117,8 +117,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.D, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" D \" is a 90 degree counter-clockwise rotation of the down face");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "D is a 90 degree counter-clockwise rotation of the down face");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -127,8 +127,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.DP, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" D\' \" is a 90 degree clockwise rotation of the down face");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "D\' is a 90 degree clockwise rotation of the down face");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -136,8 +136,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.M, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" M \" is a 90 degree clockwise rotation of the middle slice");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "M is a 90 degree clockwise rotation of the middle slice");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -146,8 +146,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.MP, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" M\' \" is a 90 degree counter-clockwise rotation of the middle slice");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "M\' is a 90 degree counter-clockwise rotation of the middle slice");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -156,8 +156,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.E, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" E \" is a 90 degree clockwise rotation of the middle equatorial slice");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "E is a 90 degree clockwise rotation of the middle equatorial slice");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -166,8 +166,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.EP, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" E\' \" is a 90 degree counter-clockwise rotation of the upper face middle equatorial slice");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "E\'is a 90 degree counter-clockwise rotation of the upper face middle equatorial slice");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -176,8 +176,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.S, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" S \" is a 90 degree clockwise rotation of the standing slice");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "S is a 90 degree clockwise rotation of the standing slice");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }
@@ -186,8 +186,8 @@ public class FaceRotations extends Activity {
         Intent intent = new Intent(this, OpenGLActivity.class);
         intent.putExtra("algorithm", new Name[]{Name.SP, Name.NULL});
         intent.putExtra("text", "");
-        intent.putExtra("guide", "\" S\' \" is a 90 degree counter-clockwise rotation of the standing slice");
-        intent.putExtra("setup", new Name[]{Name.R, Name.RP});
+        intent.putExtra("guide", "S\' is a 90 degree counter-clockwise rotation of the standing slice");
+        intent.putExtra("setup", new Name[]{Name.NULL});
         Data.setSpotToCubeIDs(Data.clearCube);
         startActivity(intent);
     }

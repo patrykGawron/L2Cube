@@ -15,7 +15,7 @@ public class VertexArray {
             GLES30.glGenVertexArrays(1, mRendererID, 0);
         }
 
-        public int getAttribLocation(int mProgram, String name){
+        public int getAtribLocation(int mProgram, String name){
             int location;
             location = GLES30.glGetAttribLocation(mProgram, name);
             return location;
@@ -27,8 +27,8 @@ public class VertexArray {
         }
 
         public void enableVertex(int program, int index){
-            GLES30.glEnableVertexAttribArray(getAttribLocation(program, "vPosition"));
-            GLES30.glVertexAttribPointer(getAttribLocation(program, "vPosition"),
+            GLES30.glEnableVertexAttribArray(getAtribLocation(program, "vPosition"));
+            GLES30.glVertexAttribPointer(getAtribLocation(program, "vPosition"),
                     attribList.get(index), GLES30.GL_FLOAT, false, mStride, 0);
         }
 

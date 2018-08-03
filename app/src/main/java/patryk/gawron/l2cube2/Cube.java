@@ -11,7 +11,7 @@ public class Cube {
     private int ID;
     private int mProgram;
     private VertexArray va;
-    private VertexBuffer vb;
+    static VertexBuffer vb;
     private IndexBuffer ib;
     private Shader shader;
     private List<Float[]> rotation;
@@ -95,6 +95,7 @@ public class Cube {
     public void pushRotation(Float[] rot){
         rotation.add(rot);
     }
+
     public int getRotationsPointer(){
         return rotation.size();
     }
