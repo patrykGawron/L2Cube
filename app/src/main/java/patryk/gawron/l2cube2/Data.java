@@ -1,6 +1,9 @@
 package patryk.gawron.l2cube2;
 
+import android.widget.BaseExpandableListAdapter;
+
 import java.util.Arrays;
+import static patryk.gawron.l2cube2.CubeColors.*;
 
 public class Data {
 
@@ -349,7 +352,7 @@ public class Data {
     };
 
     static int[] clearCube = {
-            //front wallz
+            //front wall
             23, 11, 19,
             17, 5, 15,
             25, 12 ,21,
@@ -365,239 +368,57 @@ public class Data {
 
     static float[][][] colors ={
             {
-                    {0, 0, 0, 1.0f}, //front
-                    {0, 0, 0, 1.0f}, //left
-                    {0, 0, 0, 1.0f}, //top
-                    {0, 0, 0, 1.0f}, //right
-                    {0, 0, 0, 1.0f}, //back
-                    {0, 0, 0, 1.0f}, //bottom
+                    BLACK, //front
+                    BLACK, //left
+                    BLACK, //top
+                    BLACK, //right
+                    BLACK, //back
+                    BLACK, //bottom
             },
 
             //------------------------------
 
-            {
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 1.0f, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-            },
-            {
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 1.0f, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-            },
-            {
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {1.0f, 1.0f, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-            },
-            {
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {1.0f, 1.0f, 1.0f, 1.0f},
-            },
-            {
-                    {1.0f, 0,0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-            },
-            {
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {1.0f, 0.647f, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-            },
+            {BLACK, BLACK, BLACK, GREEN, BLACK, BLACK,},
+            {BLACK, BLUE, BLACK, BLACK, BLACK, BLACK,},
+            {BLACK, BLACK, YELLOW, BLACK, BLACK, BLACK,},
+            {BLACK, BLACK, BLACK, BLACK, BLACK, WHITE,},
+            {RED, BLACK, BLACK, BLACK, BLACK, BLACK,},
+            {BLACK, BLACK, BLACK, BLACK, ORANGE, BLACK,},
 
             //--------------------------------
 
-            {
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {1.0f, 1.0f, 0, 1.0f},
-                    {0, 1.0f, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-            },
-            {
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 1.0f, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {1.0f, 1.0f, 1.0f, 1.0f},
-            },
-            {
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 1.0f, 1.0f},
-                    {1.0f, 1.0f, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-            },
-            {
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 1.0f, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {1.0f, 1.0f, 1.0f, 1.0f},
-            },
+            {BLACK, BLACK, YELLOW, GREEN, BLACK, BLACK,},
+            {BLACK, BLACK, BLACK, GREEN, BLACK, WHITE,},
+            {BLACK, BLUE, YELLOW, BLACK, BLACK, BLACK,},
+            {BLACK, BLUE, BLACK, BLACK, BLACK, WHITE,},
 
             //--------------------------------
 
-            {
-                    {1.0f, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {1.0f, 1.0f, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-            },
-            {
-                    {1.0f, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {1.0f, 1.0f, 1.0f, 1.0f},
-            },
-            {
-                    {0, 0, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {1.0f, 1.0f, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-                    {1.0f, 0.647f, 0, 1.0f},
-                    {0, 0, 0, 1.0f},
-            },
-            {
-                    {0, 0, 0, 1.0f}, //front
-                    {0, 0, 0, 1.0f}, //left
-                    {0, 0, 0, 1.0f}, //top
-                    {0, 0, 0, 1.0f}, //right
-                    {1.0f, 0.647f, 0, 1.0f}, //back
-                    {1.0f, 1.0f, 1.0f, 1.0f},
-            },
+            {RED, BLACK, YELLOW, BLACK, BLACK, BLACK,},
+            {RED, BLACK, BLACK, BLACK, BLACK, WHITE,},
+            {BLACK, BLACK, YELLOW, BLACK, ORANGE, BLACK,},
+            {BLACK, BLACK, BLACK, BLACK, ORANGE, WHITE,},
 
             //---------------------------------------
 
-            {
-                    {1.0f, 0, 0, 1.0f}, //front
-                    {0, 0, 0, 1.0f}, //left
-                    {0, 0, 0, 1.0f}, //top
-                    {0, 1.0f, 0, 1.0f}, //right
-                    {0, 0, 0, 1.0f}, //back
-                    {0, 0, 0, 1.0f}, //far
-            },
-            {
-                    {0, 0, 0, 1.0f}, //front
-                    {0, 0, 0, 1.0f}, //left
-                    {0, 0, 0, 1.0f}, //top
-                    {0, 1.0f, 0, 1.0f}, //right
-                    {1.0f, 0.647f, 0, 1.0f}, //back
-                    {0, 0, 0, 1.0f}, //far
-            },
-            {
-                    {1.0f, 0, 0, 1.0f}, //front
-                    {0, 0, 1.0f, 1.0f}, //left
-                    {0, 0, 0, 1.0f}, //top
-                    {0, 0, 0, 1.0f}, //right
-                    {0, 0, 0, 1.0f}, //back
-                    {0, 0, 0, 1.0f}, //far
-            },
-            {
-                    {0, 0, 0, 1.0f}, //front
-                    {0, 0, 1.0f, 1.0f}, //left
-                    {0, 0, 0, 1.0f}, //top
-                    {0, 0, 0, 1.0f}, //right
-                    {1.0f, 0.647f, 0, 1.0f}, //back
-                    {0, 0, 0, 1.0f}, //far
-            },
+            {RED, BLACK, BLACK, GREEN, BLACK, BLACK,},
+            {BLACK, BLACK, BLACK, GREEN, ORANGE, BLACK,},
+            {RED, BLUE, BLACK, BLACK, BLACK, BLACK,},
+            {BLACK, BLUE, BLACK, BLACK, ORANGE, BLACK,},
 
             //----------------------------------------
 
-            {
-                    {1.0f, 0,0, 1.0f}, //front
-                    {0, 0, 0, 1.0f}, //left
-                    {1.0f, 1.0f, 0, 1.0f}, //top
-                    {0, 1.0f, 0, 1.0f}, //right
-                    {0, 0, 0, 1.0f}, //back
-                    {0, 0, 0, 1.0f}, //far
-            },
-            {
-                    {0, 0, 0, 1.0f}, //front
-                    {0, 0, 0, 1.0f}, //left
-                    {1.0f, 1.0f, 0, 1.0f}, //top
-                    {0, 1.0f, 0, 1.0f}, //right
-                    {1.0f, 0.647f, 0, 1.0f}, //back
-                    {0, 0, 0, 1.0f}, //far
-            },
-            {
-                    {1.0f, 0,0, 1.0f}, //front
-                    {0, 0, 0, 1.0f}, //left
-                    {0, 0, 0, 1.0f}, //top
-                    {0, 1.0f, 0, 1.0f}, //right
-                    {0, 0, 0, 1.0f}, //back
-                    {1.0f, 1.0f, 1.0f, 1.0f},
-            },
-            {
-                    {0, 0, 0, 1.0f}, //front
-                    {0, 0, 0, 1.0f}, //left
-                    {0, 0, 0, 1.0f}, //top
-                    {0, 1.0f, 0, 1.0f}, //right
-                    {1.0f, 0.647f, 0, 1.0f}, //back
-                    {1.0f, 1.0f, 1.0f, 1.0f},
-            },
+            {RED, BLACK, YELLOW, GREEN, BLACK, BLACK,},
+            {BLACK, BLACK, YELLOW, GREEN, ORANGE, BLACK,},
+            {RED, BLACK, BLACK, GREEN, BLACK, WHITE,},
+            {BLACK, BLACK, BLACK, GREEN, ORANGE, WHITE,},
 
             //--------------------------------------
 
-            {
-                    {1.0f,0,0, 1.0f}, //front
-                    {0,0, 1.0f, 1.0f}, //left
-                    {1.0f, 1.0f, 0, 1.0f}, //top
-                    {0, 0, 0, 1.0f}, //right
-                    {0, 0, 0, 1.0f}, //back
-                    {0, 0, 0, 1.0f}, //far
-            },
-            {
-                    {0, 0, 0, 1.0f}, //front
-                    {0,0, 1.0f, 1.0f}, //left
-                    {1.0f, 1.0f, 0, 1.0f}, //top
-                    {0, 0, 0, 1.0f}, //right
-                    {1.0f, 0.647f, 0, 1.0f}, //back
-                    {0, 0, 0, 1.0f}, //far
-            },
-            {
-                    {1.0f,0,0, 1.0f}, //front
-                    {0,0, 1.0f, 1.0f}, //left
-                    {0, 0, 0, 1.0f}, //top
-                    {0, 0, 0, 1.0f}, //right
-                    {0, 0, 0, 1.0f}, //back
-                    {1.0f, 1.0f, 1.0f, 1.0f},
-            },
-            {
-                    {0, 0, 0, 1.0f}, //front
-                    {0,0, 1.0f, 1.0f}, //left
-                    {0, 0, 0, 1.0f}, //top
-                    {0, 0, 0, 1.0f}, //right
-                    {1.0f, 0.647f, 0, 1.0f}, //back
-                    {1.0f, 1.0f, 1.0f, 1.0f},
-            },
+            {RED, BLUE, YELLOW, BLACK, BLACK, BLACK,},
+            {BLACK, BLUE, YELLOW, BLACK, ORANGE, BLACK,},
+            {RED, BLUE, BLACK, BLACK, BLACK, WHITE,},
+            {BLACK, BLUE, BLACK, BLACK, ORANGE, WHITE,},
 
     };
 }
